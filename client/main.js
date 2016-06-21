@@ -2,8 +2,11 @@
 import {Meteor} from 'meteor/meteor';
 import {Router} from 'meteor/akryum:vue-router';
 
-// Routes
-import './routes';
+// Not found
+import NotFound from '/imports/ui/NotFound.vue';
+Router.on('*', {
+  component: NotFound
+});
 
 // App layout
 import AppLayout from '/imports/ui/AppLayout.vue';
